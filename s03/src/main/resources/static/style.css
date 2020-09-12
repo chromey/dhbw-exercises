@@ -1,0 +1,17 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+table {
+	border-collapse: collapse;
+}
+table td,
+table th {
+	border: 1px solid black;
+	padding: 5px;
+}
+.positive {
+	color: darkgreen;
+}
+.negative {
+	color: red;
+}

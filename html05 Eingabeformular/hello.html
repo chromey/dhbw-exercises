@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+ <html>
+ 
+<head>
+	<meta charset="UTF-8" />
+	<title>HTML05 Eingabeformular</title>
+	<meta name="description" content=“Beschreibung" />
+ </head>
+
+ <body>
+ <img src="logo.png" height="44" width="108" />
+ 
+ <h1> Gro&szlig;e &Uuml;berschrift </h1>
+ 
+<form action="meinserver.de/mache_etwas" id="" method="POST">
+	Name: <input type="text" name="firstname"/><br/><br/><br/>
+	Comment: <textarea type="text" name="comment"></textarea><br/><br/><br/>
+
+
+	<br/>
+	<input type="submit" name="submit" value="send!"/>
+	<br/>	
+	<br/>
+	
+	<select name="top5" size="5">
+      <option>Heino</option>
+      <option>Michael Jackson</option>
+      <option>Tom Waits</option>
+      <option>Nina Hagen</option>
+      <option>Marianne Rosenberg</option>
+    </select>
+	
+	<br/>
+	<br/>
+	<input type="checkbox" name="zutat" value="salami">
+	
+	<br/>
+	<br/>
+	<input type="radio" id="mc" name="Zahlmethode" value="Mastercard">
+    <label for="mc"> Mastercard</label> 
+    <input type="radio" id="vi" name="Zahlmethode" value="Visa">
+    <label for="vi"> Visa</label>
+    <input type="radio" id="ae" name="Zahlmethode" value="AmericanExpress">
+
+    <label for="ae"> American Express</label> 
+	
+	    <fieldset>
+        <legend>Name</legend>
+
+        <label for="vorname">
+            Vorname: <input name="vorname" id="vorname" placeholder="Max">
+        </label>
+
+        <label for="zuname">
+            Zuname: <input name="zuname" id="zuname" placeholder="Mustermann">
+        </label>
+
+     </fieldset>
+
+</form> 
+ 
+ 
+</body>
+
+</html>

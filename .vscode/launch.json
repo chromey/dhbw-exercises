@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-S04Application<s04>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "de.dhbw.s04.S04Application",
+      "projectName": "s04",
+      "args": ""
+    }
+  ]
+}

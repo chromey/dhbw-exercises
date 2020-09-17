@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script>
+			function getCharacter() {
+        const index = Math.floor(Math.random() * 87) + 1;
+ 				 $.ajax({
+			   	url: `https://swapi.co/api/people/${index}`,
+				 	success: function(person) {
+             console.log(person);
+             $('#fullName').val(person.name);
+						 $('#eyeColor').val(person.eye_color);
+						 
+						 $.ajax({
+							 url: response.homeworld,
+							 success: function(homeworld) {
+								$('#homeWorld').val(homeworld.name);
+							 }
+						 });
+				 	}
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<h1>STAR WARS!</h1>
+		<button onclick="getCharacter()">Random Character!</button>
+    <p>Name: <input id="fullName" disabled/></p>
+		<p>Augenfarbe: <input id="eyeColor" disabled/></p>
+		<p>Heimatwelt: <input id="homeWorld" disabled/></p>
+	</body>
+</html>

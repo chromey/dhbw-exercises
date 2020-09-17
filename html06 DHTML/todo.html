@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"
+		></script>
+		<script>
+			function addTodo() {
+        var todo = $('#todoInput').val();
+        $('#todoList').append('<li>' + todo +'</li>');
+			}
+		</script>
+	</head>
+	<body>
+    <h1>To Do List</h1>
+    <input id="todoInput"/><button onclick="addTodo()">Add To List!</button>
+    <ul id="todoList">
+    </ul>
+	</body>
+</html>

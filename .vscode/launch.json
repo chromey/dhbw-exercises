@@ -9,6 +9,26 @@
       "mainClass": "de.dhbw.s04.S04Application",
       "projectName": "s04",
       "args": ""
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-S05Application<s05>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "de.dhbw.s05.S05Application",
+      "projectName": "s05",
+      "args": ""
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-S06Application<s06>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "de.dhbw.s06.S06Application",
+      "projectName": "s06",
+      "args": ""
     }
   ]
 }

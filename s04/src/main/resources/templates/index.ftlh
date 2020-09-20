@@ -2,10 +2,10 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-		<title>Eingabeseite</title>
+		<title>Eingabeseite!</title>
 	</head>
 	<body>
-		<form action="greetings" method="POST">
+		<form action="/greetings" method="POST">
 			Geben Sie bitte Ihre Daten ein:
 			<p />
 			Vorname : <input type="text" name="firstName" /><br />

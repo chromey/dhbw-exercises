@@ -3,9 +3,9 @@
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<script>
 			function getCharacter() {
-        const index = Math.floor(Math.random() * 87) + 1;
+        const index = Math.floor(Math.random() * 82) + 1;
  				 $.ajax({
-			   	url: `https://swapi.co/api/people/${index}`,
+			   	url: `https://swapi.dev/api/people/${index}`,
 				 	success: function(person) {
              console.log(person);
              $('#fullName').val(person.name);

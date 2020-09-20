@@ -3,26 +3,35 @@
 		<!--<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
 		<script>
 			function getCharacter() {
-				const randomNumber = Math.floor(Math.random() * 87) + 1;
+				console.log(1);
+
+				const randomNumber = Math.floor(Math.random() * 82) + 1;
 				fetch('https://swapi.dev/api/people/' + randomNumber)
-					.then((response) => {
-						return response.json();
-					})
+					.then((response) => response.json())
 					.then((person) => {
+						console.log(2);
+
 						document.getElementById('fullName').value = person.name;
 						document.getElementById('eyeColor').value = person.eye_color;
 						return fetch(person.homeworld);
 					})
 					.then((response) => response.json())
 					.then((planet) => {
+						console.log(3);
+
 						document.getElementById('homeWorld').value = planet.name;
 					});
+					console.log(4);
+			}
+
+			function doOtherStuff() {
+				console.log(5);
 			}
 		</script>
 	</head>
 	<body>
 		<h1>STAR WARS!</h1>
-		<button onclick="getCharacter()">Random Character!</button>
+		<button onclick="getCharacter(); doOtherStuff();">Random Character!</button>
 		<p>Name: <input id="fullName" /></p>
 		<p>Augenfarbe: <input id="eyeColor" /></p>
 		<p>Heimatwelt: <input id="homeWorld" /></p>

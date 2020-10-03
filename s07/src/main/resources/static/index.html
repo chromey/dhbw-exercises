@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script>
+			function listTransactions() {
+				fetch('/transactions')
+					.then((res) => res.json())
+					.then((transactions) => {
+						renderTransactionsImperative(transactions);
+            // renderTransactionsFunctional(transactions)
+					});
+			}
+
+			function renderTransactionsImperative(transactions) {
+				for (let i = 0; i < transactions.length; i++) {
+					const tx = transactions[i];
+					const trClass = tx.amount > 0 ? 'positive' : 'negative';
+					$('#transaction-table').append(
+						'<tr class="' + trClass + '"><td>' + tx.description + '</td><td>' + tx.amount + '</td></tr>'
+					);
+				}
+			}
+
+			function renderTransactionsFunctional(transactions) {
+				$('#transaction-table').append(transactions.map(tx => `
+          <tr class="${tx.amount > 0 ? 'positive' : 'negative'}">
+            <td>${tx.description}</td>
+            <td>${tx.amount}</td>
+          </tr>`));
+			}
+		</script>
+	</head>
+  
+  <body onload="listTransactions()">
+		<h3>Ihre aktuellen Transaktionen</h3>
+		<table id="transaction-table">
+			<tr>
+				<th>Titel</th>
+				<th>Betrag</th>
+			</tr>
+		</table>
+	</body>
+</html>

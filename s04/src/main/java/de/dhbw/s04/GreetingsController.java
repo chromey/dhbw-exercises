@@ -21,9 +21,8 @@ public class GreetingsController {
 			System.out.println(parameterName + ": " + parameterValues);
 		}
 
-    ModelAndView mav = new ModelAndView("greetings")
+    return new ModelAndView("greetings")
        .addObject("firstName", request.getParameter("firstName"))
        .addObject("lastName", request.getParameter("lastName"));
-    return mav;
   }
 }

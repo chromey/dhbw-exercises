@@ -1,5 +1,6 @@
 package de.dhbw.s06;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -11,15 +12,14 @@ import de.dhbw.s06.counter.SessionCounter;
 @Controller
 public class CounterController {
   
+  @Autowired
   private ApplicationCounter appCounter;
+
+  @Autowired
   private SessionCounter sessionCounter;
+
+  @Autowired
   private RequestCounter requestCounter;
- 
-  public CounterController(ApplicationCounter appCounter, SessionCounter sessionCounter, RequestCounter requestCounter) {
-    this.appCounter = appCounter;
-    this.sessionCounter = sessionCounter;
-    this.requestCounter = requestCounter;
-  }
 
   @GetMapping("/")
   ModelAndView count() {
